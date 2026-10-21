@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Create account | MUST Online Application Portal</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="wrap">
+    <header class="hero">
+      <img class="hero__logo" src="../logo.png" alt="MUST crest">
+      <h1 class="hero__title">Mbarara University of Science and Technology</h1>
+      <span class="pill">Online Application Portal</span>
+    </header>
+
+    <main class="card">
+      <div class="card__head">
+        <div>
+          <h2>Create Account</h2>
+          <p class="card__sub">Provide your details to receive a temporary password.</p>
+        </div>
+        <a class="close-x" href="login.html" aria-label="Close"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></a>
+      </div>
+      <form>
+        <div class="card__body">
+          <div class="field"><label for="surname">Surname</label><div class="input"><span class="input__icon"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg></span><input id="surname" name="surname" type="text" placeholder="Surname" autocomplete="family-name"></div></div>
+          <div class="field"><label for="other">Other Names</label><div class="input"><span class="input__icon"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg></span><input id="other" name="other" type="text" placeholder="Other names" autocomplete="given-name"></div></div>
+          <div class="field">
+            <label for="phone">Phone Number</label>
+            <select class="select" aria-label="Country code">
+              <option>Uganda (+256)</option><option>Kenya (+254)</option><option>Tanzania (+255)</option><option>Rwanda (+250)</option><option>South Sudan (+211)</option>
+            </select>
+            <div class="input"><span class="input__icon"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg></span><input id="phone" name="phone" type="tel" placeholder="0770000000" autocomplete="tel-national"></div>
+            <p class="hint">Use an active phone number to receive notifications.</p>
+          </div>
+          <div class="field">
+            <label for="email">Email Address</label><div class="input"><span class="input__icon"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></span><input id="email" name="email" type="email" placeholder="myemail@gmail.com" autocomplete="email"></div>
+          </div>
+          <a class="right-link" href="https://accounts.google.com/signup" target="_blank" rel="noopener">Don't have an Email? Click to create <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 16 16 12 12 8"/><line x1="8" y1="12" x2="16" y2="12"/></svg></a>
+        </div>
+        <div class="card__foot">
+          <a class="btn btn--gray" href="login.html">Close</a>
+          <a class="btn btn--blue" href="login.html"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="8.5" cy="7" r="4"/><line x1="20" y1="8" x2="20" y2="14"/><line x1="17" y1="11" x2="23" y2="11"/></svg> Create Account</a>
+        </div>
+      </form>
+    </main>
+  </div>
+</body>
+</html>

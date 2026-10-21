@@ -1,0 +1,108 @@
+/* MUST Online Application Portal - shared styles
+   IMAGE SLOTS (you supply these):
+   1. logo.png            - university crest (used in every page header)
+   2. --page-bg-image     - optional page background photo, set below */
+:root{
+  --page-bg-image:url("images/FCI.jpeg");
+  --bg-from:#EDEDFF; --bg-to:#D3D1F6;
+  --ink:#111827; --muted:#5B6478;
+  --indigo:#3330B5; --indigo-dark:#2A2799;
+  --blue:#0B7CFF; --blue-dark:#0766D6;
+  --pill-bg:#CBC9F6; --pill-text:#2E2BA6;
+  --border:#D3D9E4; --icon-bg:#F3F5F9; --card:#fff;
+  --font:"Inter","Roboto","Segoe UI",Arial,sans-serif;
+}
+*,*::before,*::after{box-sizing:border-box}
+body{margin:0;min-height:100vh;font-family:var(--font);color:var(--ink);
+  background:var(--page-bg-image) center/cover fixed no-repeat,linear-gradient(180deg,var(--bg-from),var(--bg-to)) fixed}
+a{color:var(--blue);text-decoration:none}
+a:hover{text-decoration:underline}
+
+.wrap{max-width:520px;margin:0 auto;padding:12px 16px 40px}
+.wrap--wide{max-width:900px}
+
+/* Header */
+.hero{text-align:center;padding:20px 0 24px}
+.hero__logo{display:block;width:128px;height:128px;margin:0 auto 20px;border-radius:50%;background:#fff;
+  object-fit:contain;padding:6px;box-shadow:0 6px 20px rgba(51,48,181,.18)}
+.hero__title{margin:0;font-size:26px;line-height:1.25;font-weight:700;text-transform:uppercase;letter-spacing:.01em}
+.pill{display:inline-block;margin-top:18px;padding:10px 22px;border:1.5px solid #B7B4F0;border-radius:999px;
+  background:var(--pill-bg);color:var(--pill-text);font-size:16px;font-weight:600}
+
+/* Card */
+.card{background:var(--card);border-radius:24px;box-shadow:0 12px 40px rgba(40,38,120,.14);overflow:hidden}
+.card__body{padding:28px 24px}
+.card h1,.card h2{margin:0;font-size:24px;font-weight:700}
+.card__sub{margin:6px 0 24px;color:var(--muted);font-size:16px;line-height:1.5}
+.card__head{display:flex;justify-content:space-between;align-items:flex-start;gap:12px;padding:24px;border-bottom:1px solid #E7EAF0}
+.card__head .card__sub{margin:6px 0 0}
+.close-x{flex:none;width:44px;height:44px;border-radius:12px;background:#EEF0F4;color:var(--ink);
+  display:flex;align-items:center;justify-content:center}
+.close-x:hover{background:#E1E4EB;text-decoration:none}
+.card__foot{display:flex;justify-content:flex-end;gap:12px;padding:20px 24px;border-top:1px solid #E7EAF0}
+
+/* Icons */
+.ico{width:20px;height:20px;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;flex:none}
+
+/* Fields */
+.field{margin-bottom:20px}
+.field>label,.field__label{display:block;margin-bottom:8px;font-size:17px;font-weight:600}
+.input{display:flex;border:1.5px solid var(--border);border-radius:14px;background:#fff;overflow:hidden}
+.input:focus-within{border-color:#6F6CE0;box-shadow:0 0 0 4px rgba(111,108,224,.2)}
+.input__icon{display:flex;align-items:center;justify-content:center;width:56px;background:var(--icon-bg);color:#64748B;border-right:1.5px solid var(--border)}
+.input input,.input select{flex:1;min-width:0;height:54px;padding:0 16px;border:0;outline:0;background:transparent;font:400 17px var(--font);color:var(--ink)}
+.field select,.field textarea,.field input:not([type=radio]):not([type=checkbox]):not(.bare){font:400 17px var(--font)}
+.select{width:100%;height:54px;padding:0 14px;border:1.5px solid var(--border);border-radius:14px;background:#fff;font:400 17px var(--font);color:var(--ink);margin-bottom:12px}
+.select:focus,.plain:focus{outline:0;border-color:#6F6CE0;box-shadow:0 0 0 4px rgba(111,108,224,.2)}
+.plain{display:block;width:100%;min-height:54px;padding:0 16px;border:1.5px solid var(--border);border-radius:14px;background:#fff;font:400 17px var(--font);color:var(--ink)}
+textarea.plain{padding:14px 16px;min-height:120px;resize:vertical}
+input[type=file].plain{padding:14px 16px}
+.hint{margin:8px 0 0;font-size:14px;color:var(--muted)}
+.right-link{display:flex;justify-content:flex-end;font-style:italic;font-size:17px;margin-top:-4px}
+.right-link .ico{margin-left:8px}
+
+/* Buttons */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;height:52px;padding:0 22px;border-radius:14px;
+  font:700 17px var(--font);cursor:pointer;border:2px solid transparent;text-decoration:none}
+.btn:hover{text-decoration:none}
+.btn--block{display:flex;width:100%;height:60px;font-size:20px}
+.btn--primary{background:linear-gradient(180deg,#3B38C4,var(--indigo-dark));color:#fff;box-shadow:0 10px 22px rgba(51,48,181,.3)}
+.btn--primary:hover{background:var(--indigo-dark)}
+.btn--blue{background:var(--blue);color:#fff}
+.btn--blue:hover{background:var(--blue-dark)}
+.btn--outline{background:#fff;color:var(--blue);border-color:var(--blue)}
+.btn--gray{background:#fff;color:#4B5563;border-color:#6B7280}
+.btn--outline:hover,.btn--gray:hover{background:#F6F8FC}
+.forgot{display:flex;align-items:center;gap:10px;margin:20px 0 4px;color:var(--muted);font-size:18px}
+.forgot .ico{color:#64748B}
+.divider{display:flex;align-items:center;gap:12px;margin:22px 0 18px;color:#6B7390;font-weight:600;font-size:18px}
+.divider::before,.divider::after{content:"";flex:1;height:1px;background:#D9DDE7}
+.pair{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.pair .btn{height:56px;font-size:17px;padding:0 10px}
+
+/* Steps (how to apply) */
+.steps{margin:0 0 24px;padding:0;list-style:none;counter-reset:s}
+.steps li{counter-increment:s;display:flex;gap:14px;align-items:flex-start;margin-bottom:18px;font-size:17px;line-height:1.5}
+.steps li::before{content:counter(s);flex:none;width:34px;height:34px;border-radius:50%;background:var(--pill-bg);color:var(--pill-text);
+  font-weight:700;display:flex;align-items:center;justify-content:center}
+
+/* Application form */
+.top-actions{display:flex;justify-content:flex-end;padding:8px 0}
+.section{margin:0 0 24px;padding:24px;border:1.5px solid #E3E6EE;border-radius:18px}
+.section legend{padding:0 10px;font-size:20px;font-weight:700;color:var(--indigo)}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:0 20px}
+.grid .full{grid-column:1/-1}
+.sub{margin:4px 0 16px;font-weight:600;color:var(--muted)}
+.choices{display:flex;flex-wrap:wrap;gap:12px 28px}
+.choices label{display:flex;align-items:center;gap:8px;font-weight:500;font-size:17px;margin:0}
+.choices input,.check input{width:20px;height:20px;accent-color:var(--indigo)}
+.check{display:flex;gap:12px;align-items:flex-start;font-size:16px;line-height:1.5}
+.check input{margin-top:2px;flex:none}
+
+@media (max-width:640px){
+  .hero__title{font-size:24px}
+  .grid{grid-template-columns:1fr}
+  .section{padding:18px}
+  .card__foot{justify-content:stretch}
+  .card__foot .btn{flex:1}
+}

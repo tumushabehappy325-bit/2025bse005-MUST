@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Application form | MUST Online Application Portal</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="wrap wrap--wide">
+    <header class="hero">
+      <img class="hero__logo" src="../logo.png" alt="MUST crest">
+      <h1 class="hero__title">Mbarara University of Science and Technology</h1>
+      <span class="pill">Online Application Portal</span>
+    </header>
+
+    <div class="top-actions"><a class="btn btn--gray" href="login.html">Sign out</a></div>
+    <main class="card">
+      <div class="card__body">
+        <h2>Application Form</h2>
+        <p class="card__sub">Fill in every section. Fields marked * are required.</p>
+        <form action="#" method="post" enctype="multipart/form-data">
+
+          <fieldset class="section"><legend>1. Programme</legend>
+            <div class="field"><span class="field__label">Application category *</span>
+              <div class="choices"><label><input type="radio" name="category" required> Undergraduate</label><label><input type="radio" name="category"> Postgraduate</label></div></div>
+            <div class="grid">
+              <div class="field"><label for="c1">First choice *</label><select class="select" id="c1" name="c1" required><option value="">Select a programme</option><option>Bachelor of Biomedical Engineering</option><option>Bachelor of Science in Civil Engineering</option><option>Bachelor of Science in Electrical and Electronics Engineering</option><option>Bachelor of Science in Mechanical and Industrial Engineering</option></select></div>
+              <div class="field"><label for="c2">Second choice</label><select class="select" id="c2" name="c2"><option value="">Select a programme</option><option>Bachelor of Biomedical Engineering</option><option>Bachelor of Science in Civil Engineering</option><option>Bachelor of Science in Electrical and Electronics Engineering</option><option>Bachelor of Science in Mechanical and Industrial Engineering</option></select></div>
+            </div></fieldset>
+
+          <fieldset class="section"><legend>2. Personal details</legend><div class="grid">
+            <div class="field"><label for="surname">Surname *</label><input class="plain" id="surname" name="surname" type="text" placeholder="" required></div><div class="field"><label for="given">Other names *</label><input class="plain" id="given" name="given" type="text" placeholder="" required></div><div class="field"><label for="dob">Date of birth *</label><input class="plain" id="dob" name="dob" type="date" placeholder="" required></div><div class="field"><label for="gender">Gender *</label><select class="select" id="gender" name="gender" required><option value="">Select</option><option>Female</option><option>Male</option></select></div><div class="field"><label for="nationality">Nationality *</label><input class="plain" id="nationality" name="nationality" type="text" placeholder="Ugandan" required></div><div class="field"><label for="nin">National ID number</label><input class="plain" id="nin" name="nin" type="text" placeholder=""></div></div></fieldset>
+
+          <fieldset class="section"><legend>3. Contact</legend><div class="grid">
+            <div class="field"><label for="email">Email address *</label><input class="plain" id="email" name="email" type="email" placeholder="" required></div><div class="field"><label for="phone">Phone number *</label><input class="plain" id="phone" name="phone" type="tel" placeholder="0770000000" required></div><div class="field"><label for="district">District of residence *</label><input class="plain" id="district" name="district" type="text" placeholder="" required></div><div class="field"><label for="nok">Next of kin phone *</label><input class="plain" id="nok" name="nok" type="tel" placeholder="" required></div>
+            <div class="field full"><label for="address">Postal or home address</label><textarea class="plain" id="address" name="address"></textarea></div></div></fieldset>
+
+          <fieldset class="section"><legend>4. Academic background</legend>
+            <p class="sub">O level (UCE)</p><div class="grid"><div class="field full"><label for="o_school">Award institution *</label><input class="plain" id="o_school" name="o_school" type="text" placeholder="" required></div><div class="field"><label for="o_index">Index number *</label><input class="plain" id="o_index" name="o_index" type="text" placeholder="" required></div><div class="field"><label for="o_year">Year of sitting *</label><input class="plain" id="o_year" name="o_year" type="number" placeholder="" required min="1980" max="2026"></div></div>
+            <p class="sub">A level (UACE) or equivalent</p><div class="grid"><div class="field full"><label for="a_school">Award institution *</label><input class="plain" id="a_school" name="a_school" type="text" placeholder="" required></div><div class="field"><label for="a_index">Index number *</label><input class="plain" id="a_index" name="a_index" type="text" placeholder="" required></div><div class="field"><label for="a_year">Year of sitting *</label><input class="plain" id="a_year" name="a_year" type="number" placeholder="" required min="1980" max="2026"></div></div></fieldset>
+
+          <fieldset class="section"><legend>5. Documents</legend><div class="grid">
+            <div class="field"><label for="uce">UCE result slip *</label><input class="plain" id="uce" name="uce" type="file" accept=".pdf,.jpg,.jpeg,.png" required><p class="hint">PDF or image</p></div>
+            <div class="field"><label for="uace">UACE result slip *</label><input class="plain" id="uace" name="uace" type="file" accept=".pdf,.jpg,.jpeg,.png" required><p class="hint">PDF or image</p></div>
+            <div class="field full"><label for="why">Why do you want to study at MUST?</label><textarea class="plain" id="why" name="why"></textarea></div></div></fieldset>
+
+          <fieldset class="section"><legend>6. Declaration</legend>
+            <label class="check"><input type="checkbox" name="declaration" required> I confirm that the information I have given is true and complete. *</label></fieldset>
+
+          <button class="btn btn--primary btn--block" type="submit">Submit Application</button>
+        </form>
+      </div>
+    </main>
+  </div>
+</body>
+</html>
